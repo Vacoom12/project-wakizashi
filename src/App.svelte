@@ -2,46 +2,28 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
+  import pb from './lib/pocketbase.js'
+
+  let letters = []
+
+  async function handleClick() {
+    const resultList = await pb.collection('letters').getList(1, 50)
+    letters = resultList.items
+  }
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs font-bold">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <button on:click={handleClick}>
+    click me
+  </button>
+  {#if letters.length > 0}
+  <ul>
+    {#each letters as letter (letter.id)}
+      <li>{letter.hiragana}</li>
+      <li>{letter.hiragana}</li>
+    {/each}
+  </ul>
+  {:else}
+    <p>Loading...</p>
+  {/if}
 </main>
-
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
-</style>
