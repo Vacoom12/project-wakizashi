@@ -1,29 +1,14 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
-  import pb from './lib/pocketbase.js'
-
-  let letters = []
-
-  async function handleClick() {
-    const resultList = await pb.collection('letters').getList(1, 50)
-    letters = resultList.items
-  }
+  import { Router, Route } from "svelte-routing";
+  import HomePage from "./routes/HomePage.svelte";
+  import AlphabetPage from "./routes/AlphabetPage.svelte";
+  import VocabPage from "./routes/VocabPage.svelte";
+  import TestPage from "./routes/TestPage.svelte";
 </script>
 
-<main>
-  <button on:click={handleClick}>
-    click me
-  </button>
-  {#if letters.length > 0}
-  <ul>
-    {#each letters as letter (letter.id)}
-      <li>{letter.hiragana}</li>
-      <li>{letter.hiragana}</li>
-    {/each}
-  </ul>
-  {:else}
-    <p>Loading...</p>
-  {/if}
-</main>
+<Router>
+  <Route path="/" component={HomePage} />
+  <Route path="/alphabet" component={AlphabetPage} />
+  <Route path="/vocabulary" component={VocabPage} />
+  <Route path="/test" component={TestPage} />
+</Router>

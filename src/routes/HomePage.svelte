@@ -1,0 +1,14 @@
+<script>
+    import MenuCard from '../lib/MenuCard.svelte';
+</script>
+
+<div class="bg-orange-50 min-h-screen flex items-center justify-center">
+    <div class="text-center">
+        <h1 class="text-center m-4">Welcome</h1>
+        <div class="flex flex-col sm:flex-row md:flex-row justify-center">
+            <MenuCard pageLink={"/alphabet"} menuName={"Hiragana & Katakana"} />
+            <MenuCard pageLink={"/vocabulary"} menuName={"Vocabulary"} />
+            <MenuCard pageLink={"/test"} menuName={"Quick Test"} />
+        </div>
+    </div>
+</div>

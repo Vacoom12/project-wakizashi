@@ -8,6 +8,9 @@ dependencies:
   pocketbase:
     specifier: ^0.18.0
     version: 0.18.0
+  svelte-routing:
+    specifier: ^2.5.0
+    version: 2.5.0
 
 devDependencies:
   '@sveltejs/vite-plugin-svelte':
@@ -960,6 +963,10 @@ packages:
     dependencies:
       svelte: 4.2.0
     dev: true
+
+  /svelte-routing@2.5.0:
+    resolution: {integrity: sha512-fM8yb6qRaaOZiOtNkh8lLt4myEINjVWUzQOmLYelrIuAAVW1q4y4IYHOA78D+iDE/Abl3aiFDHn/kS/kZNvRWA==}
+    dev: false
 
   /svelte@4.2.0:
     resolution: {integrity: sha512-kVsdPjDbLrv74SmLSUzAsBGquMs4MPgWGkGLpH+PjOYnFOziAvENVzgJmyOCV2gntxE32aNm8/sqNKD6LbIpeQ==}
