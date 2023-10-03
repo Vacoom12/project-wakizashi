@@ -17,7 +17,12 @@
     <h1 class="text-center m-4">Hiragana</h1>
     <div class="grid grid-cols-5">
         {#each letters as letter (letter.id)}
-            <ApbCard letter={letter.hiragana} />
+            {#if letter.hiragana == 'や' || letter.hiragana == 'ゆ' || letter.hiragana == 'わ' || letter.hiragana == 'を'}
+                <ApbCard letter={letter.hiragana} />
+                <div></div>
+            {:else}
+                <ApbCard letter={letter.hiragana} />
+            {/if}
         {/each}
     </div>
     <h1 class="text-center m-4">Katakana</h1>
