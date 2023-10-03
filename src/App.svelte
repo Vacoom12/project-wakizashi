@@ -5,7 +5,7 @@
   import VocabPage from "./routes/VocabPage.svelte";
   import TestPage from "./routes/TestPage.svelte";
 </script>
-<div class="bg-orange-50 min-h-screen flex items-center justify-center">
+<div class="bg-orange-50  min-h-screen flex items-center justify-center">
   <nav class="bg-red-500 flex h-[75px] w-full fixed z-10 top-0 text-white items-center p-5">
     <div>
       <h1>Logo</h1>

@@ -18,10 +18,10 @@
     <div class="grid grid-cols-5">
         {#each letters as letter (letter.id)}
             {#if 'やゆわを'.includes(letter.hiragana)}
-                <ApbCard letter={letter.hiragana} />
+                <ApbCard letter={letter.hiragana} th={letter.THtranslate} eng={letter.ENGtranslate} />
                 <div></div>
             {:else}
-                <ApbCard letter={letter.hiragana} />
+                <ApbCard letter={letter.hiragana} th={letter.THtranslate} eng={letter.ENGtranslate} />
             {/if}
         {/each}
     </div>
@@ -29,10 +29,10 @@
     <div class="grid grid-cols-5">
         {#each letters as letter (letter.id)}
             {#if 'ヤユワヲ'.includes(letter.katakana)}
-                <ApbCard letter={letter.katakana} />
+                <ApbCard letter={letter.katakana} th={letter.THtranslate} eng={letter.ENGtranslate} />
                 <div></div>
             {:else}
-                <ApbCard letter={letter.katakana} />
+                <ApbCard letter={letter.katakana} th={letter.THtranslate} eng={letter.ENGtranslate} />
             {/if}
         {/each}
     </div>
