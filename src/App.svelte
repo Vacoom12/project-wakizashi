@@ -6,6 +6,15 @@
   import TestPage from "./routes/TestPage.svelte";
 </script>
 
+<!-- <nav class="bg-red-500 flex h-[50px] w-full fixed z-10 top-0 text-white">
+  <div>
+    Nihongo
+  </div>
+  <div>
+    Home
+  </div>
+</nav> -->
+
 <Router>
   <Route path="/" component={HomePage} />
   <Route path="/alphabet" component={AlphabetPage} />
