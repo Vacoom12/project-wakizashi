@@ -17,6 +17,7 @@
       <a href="/test" class="mx-2">Test</a>
     </div>
   </nav>
+  
 <Router>
   <Route path="/" component={HomePage} />
   <Route path="/alphabet" component={AlphabetPage} />
