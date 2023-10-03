@@ -17,7 +17,7 @@
     <h1 class="text-center m-4">Hiragana</h1>
     <div class="grid grid-cols-5">
         {#each letters as letter (letter.id)}
-            {#if letter.hiragana == 'や' || letter.hiragana == 'ゆ' || letter.hiragana == 'わ' || letter.hiragana == 'を'}
+            {#if 'やゆわを'.includes(letter.hiragana)}
                 <ApbCard letter={letter.hiragana} />
                 <div></div>
             {:else}
@@ -26,4 +26,14 @@
         {/each}
     </div>
     <h1 class="text-center m-4">Katakana</h1>
+    <div class="grid grid-cols-5">
+        {#each letters as letter (letter.id)}
+            {#if 'ヤユワヲ'.includes(letter.katakana)}
+                <ApbCard letter={letter.katakana} />
+                <div></div>
+            {:else}
+                <ApbCard letter={letter.katakana} />
+            {/if}
+        {/each}
+    </div>
 </div>
