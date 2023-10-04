@@ -7,7 +7,7 @@
         <div class="card-front bg-white flex items-center justify-center text-[16px] md:text-[32px] lg:text-[64px]">
             {letter}
         </div>
-        <div class="card-back bg-white flex items-center justify-center flex-col text-[8px] md:text-[20px] lg:text-[28px]">
+        <div class="card-back bg-red-500 text-white flex items-center justify-center flex-col text-[8px] md:text-[20px] lg:text-[28px]">
             <p>{eng}</p>
             <p>{th}</p>
         </div>
@@ -25,7 +25,7 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        transition: transform 0.8s;
+        transition: transform 0.6s;
         transform-style: preserve-3d;
     }
 
