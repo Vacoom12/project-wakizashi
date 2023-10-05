@@ -1,16 +1,16 @@
 <script>
+    import { onMount } from 'svelte';
     import ApbCard from "../lib/ApbCard.svelte";
     import pb from "../lib/pocketbase.js";
 
     let letters = [];
 
-    async function getHiragana() {
+    onMount(async () => {
         const hiraganaList = await pb.collection("letters").getList(1, 50);
         letters = hiraganaList.items;
         console.log(letters);
-    }
+    })
 
-    getHiragana();
 </script>
 
 <div class="text-center mt-[75px]">
