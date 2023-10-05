@@ -6,11 +6,11 @@
     <div class="card-inner">
         <div class="card-front bg-white flex flex-col items-center justify-center">
             <img src={imgSrc} alt={word} class="w-full h-full">
-            <div class="bg-red-500 text-white flex items-center justify-center text-[16px] md:text-[20px] lg:text-[24px] w-[140px] h-[70px] md:w-[160px] md:h-[80px] lg:w-[180px] lg:h-[90px]">
+            <div class="bg-red-500 text-white p-[5px] flex items-center justify-center text-[16px] md:text-[20px] lg:text-[24px] w-[140px] h-[70px] md:w-[160px] md:h-[80px] lg:w-[180px] lg:h-[90px]">
                 {word}
             </div>
         </div>
-        <div class="card-back bg-red-500 text-white flex items-center justify-center flex-col text-[16px] md:text-[20px] lg:text-[24px]">
+        <div class="card-back bg-red-500 text-white p-[5px] flex items-center justify-center flex-col text-[16px] md:text-[20px] lg:text-[24px]">
             <p>{pronounce}</p>
             <p>{eng}</p>
             <p>{th}</p>
