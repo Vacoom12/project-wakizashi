@@ -5,7 +5,7 @@
 <div class="card w-[140px] h-[210px] md:w-[160px] md:h-[240px] lg:w-[180px] lg:h-[270px] mx-6 my-3 drop-shadow-md">
     <div class="card-inner">
         <div class="card-front bg-white flex flex-col items-center justify-center">
-            <img src={imgSrc} alt={word} class="w-full h-full">
+            <img src="{imgSrc}" alt="{word}" class="w-full h-full">
             <div class="bg-red-500 text-white p-[5px] flex items-center justify-center text-[16px] md:text-[20px] lg:text-[24px] w-[140px] h-[70px] md:w-[160px] md:h-[80px] lg:w-[180px] lg:h-[90px]">
                 {word}
             </div>
