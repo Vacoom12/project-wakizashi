@@ -23,19 +23,24 @@
 <div class="text-center mt-[75px]">
     <h1 class="text-center mb-4">Vocabulary</h1>
     {#each wordCategory as category}
-        <h1>{category}</h1>
-        <div class="grid grid-cols-5">
-            {#each words as word (word.id)}
-                {#if word.category === category}
-                    <VocabCard
-                        word={word.word}
-                        pronounce={word.pronounce}
-                        eng={word.ENGtranslate}
-                        th={word.THtranslate}
-                        imgSrc={word.img}
-                    />
-                {/if}
-            {/each}
+        <div class="mb-[20px]">
+            <div class="flex items-center justify-center">
+                <h1 class="text-white font-bold bg-red-500 rounded-md p-[8px] px-[12px] mx-[23px]">{category}</h1>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                {#each words as word (word.id)}
+                    {#if word.category === category}
+                        <VocabCard
+                            id={word.id}
+                            word={word.word}
+                            pronounce={word.pronounce}
+                            eng={word.ENGtranslate}
+                            th={word.THtranslate}
+                            imgSrc={word.img}
+                        />
+                    {/if}
+                {/each}
+            </div>
         </div>
     {/each}
 </div>
