@@ -18,7 +18,7 @@
     </div>
   </nav>
 </header>
-<div class="bg-orange-50  min-h-screen flex items-center justify-center">
+<div class="bg-orange-50 min-h-screen flex items-center justify-center">
   
 <Router>
   <Route path="/" component={HomePage} />

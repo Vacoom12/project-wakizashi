@@ -8,7 +8,7 @@
 
     onMount(async () => {
         const vocabList = await pb.collection("vocabulary").getFullList({
-            sort: "-category",
+            sort: "+priority",
         });
         words = vocabList;
         
@@ -23,7 +23,7 @@
 <div class="text-center mt-[75px]">
     <h1 class="text-center mb-4">Vocabulary</h1>
     {#each wordCategory as category}
-        <div class="mb-[20px]">
+        <div class="mb-[30px]">
             <div class="flex items-center justify-center">
                 <h1 class="text-white font-bold bg-red-500 rounded-md p-[8px] px-[12px] mx-[23px]">{category}</h1>
             </div>
