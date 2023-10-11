@@ -9,9 +9,13 @@
     let box = {
         question: "",
         answer1: [],
+        check1: false,
         answer2: [],
+        check2: false,
         answer3: [],
+        check3: false,
         answer4: [],
+        check4: false,
     };
 
     function setAnswer(thList, engList) {
@@ -26,18 +30,19 @@
 
         let thList = ['', '', '', ''];
         let engList = ['', '', '', ''];
-
         let randomAnswerIndex = Math.floor(Math.random() * 4)
-        console.log(randomAnswerIndex)
+
         thList[randomAnswerIndex] = allQuestions[index].THtranslate;
-        engList[randomAnswerIndex] = allQuestions[index].ENGtranslate
+        engList[randomAnswerIndex] = allQuestions[index].ENGtranslate;
+        box[`check${randomAnswerIndex + 1}`] = true;
 
         let wrongAnswer = allQuestions.slice(allQuestions[index]);
 
         for (let i = 0; i < 4; i++) {
             if (thList[i] != allQuestions[index].THtranslate) {
-                thList[i] = wrongAnswer[Math.floor(Math.random() * wrongAnswer.length)].THtranslate;
-                engList[i] = wrongAnswer[Math.floor(Math.random() * wrongAnswer.length)].ENGtranslate;
+                let randomWrongInedx = Math.floor(Math.random() * wrongAnswer.length)
+                thList[i] = wrongAnswer[randomWrongInedx].THtranslate;
+                engList[i] = wrongAnswer[randomWrongInedx].ENGtranslate;
             }
         }
 
@@ -54,14 +59,12 @@
     });
 </script>
 
-<div
-    class="bg-red-500 w-[600px] h-[450px] flex flex-col items-center justify-center"
->
+<div class="bg-red-500 w-[600px] h-[450px] flex flex-col items-center justify-center">
     <QuestionBox question={box.question} />
     <div class="grid grid-cols-2 gap-x-[120px] gap-y-8">
-        <AnswerBox answer={box.answer1} />
-        <AnswerBox answer={box.answer2} />
-        <AnswerBox answer={box.answer3} />
-        <AnswerBox answer={box.answer4} />
+        <AnswerBox answer={box.answer1} isCorrect={box.check1}/>
+        <AnswerBox answer={box.answer2} isCorrect={box.check2}/>
+        <AnswerBox answer={box.answer3} isCorrect={box.check3}/>
+        <AnswerBox answer={box.answer4} isCorrect={box.check4}/>
     </div>
 </div>
