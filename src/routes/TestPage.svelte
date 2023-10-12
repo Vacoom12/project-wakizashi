@@ -50,11 +50,15 @@
         setAnswer(thList, engList)
     }
 
-    onMount(async () => {
+
+    async function loadQuestions() {
         const allList = await pb.collection("letters").getFullList();
         allQuestions = allList;
-
         setQuestion();
+    }
+
+    onMount(() => {
+        loadQuestions();
     });
 
     isClick.subscribe(value => {
@@ -62,6 +66,7 @@
             buttonContainer = "pointer-events-none";
         } else {
             buttonContainer = "pointer-events-auto";
+            loadQuestions()
         }
     });
 </script>
