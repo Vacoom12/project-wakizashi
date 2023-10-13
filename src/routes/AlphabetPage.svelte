@@ -15,7 +15,7 @@
 </script>
 
 <div class="text-center mt-[75px]">
-    <h1 class="text-center mb-4">Hiragana</h1>
+    <h1 class="text-center mb-4 text-[24px] font-bold">- Hiragana -</h1>
     <div class="grid grid-cols-5">
         {#each letters as letter (letter.id)}
             {#if 'やゆわを'.includes(letter.hiragana)}
@@ -30,7 +30,7 @@
             {/if}
         {/each}
     </div>
-    <h1 class="text-center m-4">Katakana</h1>
+    <h1 class="text-center m-4 text-[24px] font-bold">- Katakana -</h1>
     <div class="grid grid-cols-5">
         {#each letters as letter (letter.id)}
             {#if 'ヤユワヲ'.includes(letter.katakana)}

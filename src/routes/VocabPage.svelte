@@ -21,7 +21,7 @@
 </script>
 
 <div class="text-center mt-[75px]">
-    <h1 class="text-center mb-4">Vocabulary</h1>
+    <h1 class="text-center mb-4 text-[24px] font-bold">- Vocabulary -</h1>
     {#each wordCategory as category}
         <div class="mb-[30px]">
             <div class="flex items-center justify-center">
