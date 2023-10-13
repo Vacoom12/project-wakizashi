@@ -7,6 +7,6 @@
     <div class="flex flex-col sm:flex-row md:flex-row justify-center">
         <MenuCard pageLink={"/alphabet"} menuName={"Hiragana & Katakana"} />
         <MenuCard pageLink={"/vocabulary"} menuName={"Vocabulary"} />
-        <MenuCard pageLink={"/test"} menuName={"Quick Test"} />
+        <MenuCard pageLink={"/test-menu"} menuName={"Quick Test"} />
     </div>
 </div>

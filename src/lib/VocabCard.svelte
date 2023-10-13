@@ -22,8 +22,7 @@
 
 <style>
     .card {
-        /* background-color: transparent; */
-        @apply bg-transparent;
+        background-color: transparent;
         perspective: 1000px;
     }
 
