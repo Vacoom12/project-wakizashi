@@ -12,11 +12,16 @@
         });
         words = vocabList;
         
+        // const vocabList = await pb.collection("vocabulary").getOne("ur9ecr6lc8jsk7o");
+        // const fileName = vocabList.img
+        // url = pb.files.getUrl(vocabList, fileName)
+
         words.forEach(word => {
             if (!wordCategory.includes(word.category)) {
                 wordCategory.push(word.category);
             }
         });
+
     });
 </script>
 

@@ -6,14 +6,15 @@
     <div class="card-inner">
         <div class="card-front bg-white flex flex-col items-center justify-center">
             <div class="w-full h-full">
-                <img src="/backend/pb_data/storage/vjgkho5pht331vb/{id}/{imgSrc}" alt="{word}" class="w-full h-full object-cover">
+                <img src="http://127.0.0.1:8090/api/files/vjgkho5pht331vb/{id}/{imgSrc}" alt="{word}" class="w-full h-full object-cover">
+                <!-- <img src="/backend/pb_data/storage/vjgkho5pht331vb/{id}/{imgSrc}" alt="{word}" class="w-full h-full object-cover"> -->
             </div>
             <div class="bg-red-500 text-white p-[5px] flex items-center justify-center text-[16px] md:text-[20px] lg:text-[24px] w-[140px] h-[70px] md:w-[160px] md:h-[80px] lg:w-[180px] lg:h-[90px]">
                 {word}
             </div>
         </div>
         <div class="card-back bg-red-500 text-white p-[5px] flex items-center justify-center flex-col text-[16px] md:text-[20px] lg:text-[24px]">
-            <p>{pronounce}</p>
+            <p class="text-[8px] md:text-[12px] lg:text-[16px]">{pronounce}</p>
             <p>{eng}</p>
             <p>{th}</p>
         </div>
