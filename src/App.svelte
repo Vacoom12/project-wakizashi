@@ -10,9 +10,11 @@
   import VocabTestPage from "./routes/VocabTestPage.svelte";
 </script>
 <header>
-  <nav class="bg-red-500 flex h-[50px] w-full fixed z-10 top-0 text-white items-center p-5">
-    <div>
-      <h1>Logo</h1>
+  <nav class="bg-red-500 flex h-[50px] w-full fixed z-10 top-0 text-white items-center p-4">
+    <div class="w-[45px]">
+      <a href="/">
+        <img src="./src/assets/nihon-logo.png" alt="Logo">
+      </a>
     </div>
     <div class="ml-auto">
       <a href="/" class="mx-2">Home</a>
@@ -34,3 +36,7 @@
   <Route path="/vocabulary-test" component={VocabTestPage} />
 </Router>
 </div>
+
+<footer class="bg-red-500 h-[50px] flex items-center justify-center">
+  <h1 class="font-bold text-white">By Saksakun Jiarapong</h1>
+</footer>
